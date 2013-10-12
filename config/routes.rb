@@ -1,4 +1,10 @@
 SinglePageQr::Application.routes.draw do
+  resources :entries, only: [:new, :create]
+
+  namespace :admin do
+    resources :entries, only: [:index, :show]
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
