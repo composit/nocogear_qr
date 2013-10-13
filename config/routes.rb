@@ -2,6 +2,7 @@ SinglePageQr::Application.routes.draw do
   resources :entries, only: [:show, :new, :create]
 
   namespace :admin do
+    resource :session, only: [:new, :create, :destroy]
     resources :entries, only: [:index, :show]
   end
 

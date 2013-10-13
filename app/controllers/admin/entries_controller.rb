@@ -1,4 +1,5 @@
-class EntriesController < ApplicationController
+class Admin::EntriesController < ApplicationController
+  before_action :authenticate_admin
   before_action :set_entry, only: :show
 
   def index
@@ -17,5 +18,9 @@ class EntriesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def entry_params
       params.require(:entry).permit(:name, :email, :phone, :description)
+    end
+
+    def authenticate_admin
+      redirect_to('/', error: 'Please log in') unless current_user
     end
 end

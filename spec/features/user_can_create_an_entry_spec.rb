@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 feature 'user can create an entry' do
-  let(:success_message) { 'Your submission has been received' }
-  let(:validation_message) { 'Name can\'t be blank' }
+  given(:success_message) { 'Your submission has been received' }
+  given(:validation_message) { 'Name can\'t be blank' }
 
   scenario 'user sees a confirmation when she correctly enters all fields' do
     visit '/'
