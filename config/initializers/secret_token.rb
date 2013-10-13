@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-SinglePageQr::Application.config.secret_key_base = '88a7863ec1718f68c13ea0d4d35622e8ceb012c101d41f650bbe15fdabced2b8fdc8c58099182bb343bf3f14f9df40e9e8445d07505ac8bd9cfdd7fd9bc32ab7'
+SinglePageQr::Application.config.secret_key_base = CONFIG[:secret_key_base]
