@@ -1,6 +1,14 @@
 require 'spec_helper'
 
 describe EntriesController do
+  context 'GET/1' do
+    it 'assigns the entry' do
+      entry = create :entry
+      get :show, id: entry.id
+      expect(assigns[:entry]).to eq entry
+    end
+  end
+
   context 'POST' do
     context 'with valid params' do
       let(:params) { { entry: FactoryGirl.attributes_for(:entry) } }

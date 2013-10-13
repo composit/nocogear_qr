@@ -1,5 +1,5 @@
 SinglePageQr::Application.routes.draw do
-  resources :entries, only: [:new, :create]
+  resources :entries, only: [:show, :new, :create]
 
   namespace :admin do
     resources :entries, only: [:index, :show]
