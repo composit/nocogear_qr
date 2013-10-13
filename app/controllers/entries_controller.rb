@@ -1,4 +1,6 @@
 class EntriesController < ApplicationController
+  respond_to :html
+
   def new
     @entry = Entry.new
   end
@@ -6,12 +8,10 @@ class EntriesController < ApplicationController
   def create
     @entry = Entry.new(entry_params)
 
-    respond_to do |format|
-      if @entry.save
-        redirect_to @entry, notice: 'Entry was successfully created.'
-      else
-        render action: 'new'
-      end
+    if @entry.save
+      redirect_to "/", notice: 'Your submission has been received. Thanks!'
+    else
+      render action: 'new'
     end
   end
 
