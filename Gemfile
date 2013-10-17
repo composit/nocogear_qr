@@ -31,6 +31,7 @@ group :development, :test do
   gem 'capybara-webkit', '~> 1.0.0'
   gem 'factory_girl_rails', '~> 4.2.1'
   gem 'rspec-rails', '~> 2.14.0'
+  gem 'pry', '~> 0.9.12'
 end
 
 group :doc do
