@@ -48,6 +48,5 @@ describe Admin::SessionsController do
         expect(response).to redirect_to new_admin_session_url
       end
     end
-
   end
 end
