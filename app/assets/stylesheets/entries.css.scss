@@ -5,3 +5,37 @@
 body {
   background-image: url(/mtn.jpg);
 }
+
+div#main {
+  width: 600px;
+  margin: auto;
+  font-size: 2em;
+  font-family: $helvetica;
+  font-weight: bold;
+
+  h1 {
+    font-family: $georgia;
+  }
+
+  div.title {
+    margin-top: 1em;
+    color: #415510;
+    margin-left: 10px;
+  }
+
+  div.input {
+    input, textarea {
+      width: 100%;
+      border: 0;
+      background-color: #ddd;
+    }
+
+    input {
+      height: 3em;
+    }
+
+    textarea {
+      height: 6em;
+    }
+  }
+}

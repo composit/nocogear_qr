@@ -159,7 +159,7 @@ DEPENDENCIES
   factory_girl_rails (~> 4.2.1)
   jquery-rails (~> 3.0.4)
   launchy (~> 2.3.0)
-  neat
+  neat (~> 1.4.0)
   pry (~> 0.9.12)
   rails (= 4.0.0)
   rspec-rails (~> 2.14.0)
