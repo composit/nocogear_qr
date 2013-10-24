@@ -1,0 +1,11 @@
+<h2>A new entry has been submitted to NoCoGear</h2>
+
+<p>Name: <%= @entry.name %></p>
+
+<p>Email: <%= @entry.email %></p>
+
+<p>Phone: <%= @entry.phone %></p>
+
+<p>Description <%= @entry.description %></p>
+
+<%= link_to "Admin link", admin_entry_url(@entry) %>

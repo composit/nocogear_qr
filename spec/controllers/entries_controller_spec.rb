@@ -17,6 +17,12 @@ describe EntriesController do
         expect { post :create, params }.to change { Entry.count }.by 1
       end
 
+      it 'sends an email' do
+        expect {
+          post :create, params
+        }.to change{ActionMailer::Base.deliveries.count}.by 1
+      end
+
       it 'sets a flash message' do
         post :create, params
         expect(flash[:notice]).to eq 'Your submission has been received. Thanks!'

@@ -25,5 +25,17 @@ module SinglePageQr
     config.generators do |g|
       g.factory_girl false
     end
+
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => CONFIG[:email][:domain],
+      :user_name            => CONFIG[:email][:user_name],
+      :password             => CONFIG[:email][:password],
+      :authentication       => 'plain',
+      :enable_starttls_auto => true 
+    }
+    config.action_mailer.default_url_options = { host: CONFIG[:host] }
   end
 end

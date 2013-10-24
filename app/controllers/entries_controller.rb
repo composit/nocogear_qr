@@ -13,6 +13,7 @@ class EntriesController < ApplicationController
     @entry = Entry.new(entry_params)
 
     if @entry.save
+      EntryMailer.entry_notification(@entry).deliver
       redirect_to @entry, notice: 'Your submission has been received. Thanks!'
     else
       render action: 'new'
