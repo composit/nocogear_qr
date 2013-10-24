@@ -36,7 +36,7 @@ feature 'logged in admin' do
   
   scenario 'can see individual entries' do
     visit '/admin/entries'
-    click_link 'Show'
+    first('tr > td > a').click
     expect(page).to have_content('test entry 1')
     expect(page).to have_no_content('test entry 2')
   end
