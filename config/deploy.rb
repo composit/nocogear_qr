@@ -31,6 +31,9 @@ after "deploy:restart", "deploy:cleanup"
 
 after 'deploy:update_code' do
   run "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml"
+end
+
+before 'deploy:assets:precompile' do
   run "ln -nfs #{deploy_to}/shared/config/application.yml #{release_path}/config/application.yml"
 end
 
