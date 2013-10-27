@@ -31,6 +31,7 @@ gem 'capistrano', '~> 2.15.5'
 gem 'rvm-capistrano', '~> 1.5.0'
 gem 'neat', '~> 1.4.0'
 gem 'pg', '~> 0.17.0'
+gem 'unicorn', '~> 4.6.3'
 
 group :development, :test do
   gem 'capybara-webkit', '~> 1.0.0'

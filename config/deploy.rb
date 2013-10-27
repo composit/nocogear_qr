@@ -23,7 +23,6 @@ unicorn_pid = "#{current_path}/tmp/pids/unicorn.pid"
 
 namespace :deploy do
   task :restart, roles: :app, except: { no_release: true } do
-    run "ln -nfs #{deploy_to}/shared/pids/unicord.pid #{unicorn_pid}"
     run "#{try_sudo} kill -s USR2 `cat #{unicorn_pid}`"
   end
 end
