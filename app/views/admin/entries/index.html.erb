@@ -1,14 +1,10 @@
 <h1>Listing entries</h1>
 
-<table>
+<table id='admin-entries'>
   <thead>
     <tr>
       <th>Name</th>
       <th>Email</th>
-      <th>Phone</th>
-      <th>Description</th>
-      <th></th>
-      <th></th>
       <th></th>
     </tr>
   </thead>
@@ -18,8 +14,6 @@
       <tr>
         <td><%= entry.name %></td>
         <td><%= entry.email %></td>
-        <td><%= entry.phone %></td>
-        <td><%= entry.description %></td>
         <td><%= link_to 'Show', [:admin, entry] %></td>
       </tr>
     <% end %>

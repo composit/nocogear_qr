@@ -19,6 +19,14 @@ div#main {
   div#form {
   }
 
+  div#logo {
+    margin-bottom: 20px;
+
+    img {
+      width: 400px;
+    }
+  }
+
   h1, h2 {
     font-family: $georgia;
     margin: 0;
@@ -83,6 +91,8 @@ div#main {
   }
 
   div#footer {
+    float: right;
+
     a {
       color: #fff942;
       font-size: 0.6em;
