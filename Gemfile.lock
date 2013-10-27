@@ -178,7 +178,7 @@ DEPENDENCIES
   jquery-rails (~> 3.0.4)
   launchy (~> 2.3.0)
   neat (~> 1.4.0)
-  pg
+  pg (~> 0.17.0)
   pry (~> 0.9.12)
   rails (= 4.0.0)
   rspec-rails (~> 2.14.0)
