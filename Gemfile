@@ -30,6 +30,7 @@ gem 'turbolinks', '~> 1.3.0'
 gem 'capistrano', '~> 2.15.5'
 gem 'rvm-capistrano', '~> 1.5.0'
 gem 'neat', '~> 1.4.0'
+gem 'pg', '~> 0.17.0'
 
 group :development, :test do
   gem 'capybara-webkit', '~> 1.0.0'
