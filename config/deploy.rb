@@ -23,6 +23,7 @@ unicorn_pid = "#{current_path}/tmp/pids/unicorn.pid"
 
 namespace :deploy do
   task :restart, roles: :app, except: { no_release: true } do
+    run "ln -nfs #{deploy_to}/shared/pids/unicord.pid #{unicorn_pid}"
     run "#{try_sudo} kill -s USR2 `cat #{unicorn_pid}`"
   end
 end
@@ -31,9 +32,6 @@ after "deploy:restart", "deploy:cleanup"
 
 after 'deploy:update_code' do
   run "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml"
-end
-
-before 'deploy:assets:precompile' do
   run "ln -nfs #{deploy_to}/shared/config/application.yml #{release_path}/config/application.yml"
 end
 

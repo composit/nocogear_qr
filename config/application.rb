@@ -30,9 +30,9 @@ module SinglePageQr
     config.action_mailer.smtp_settings = {
       :address              => "smtp.gmail.com",
       :port                 => 587,
-      :domain               => CONFIG[:email][:domain],
-      :user_name            => CONFIG[:email][:user_name],
-      :password             => CONFIG[:email][:password],
+      :domain               => CONFIG[:email_domain],
+      :user_name            => CONFIG[:email_user_name],
+      :password             => CONFIG[:email_password],
       :authentication       => 'plain',
       :enable_starttls_auto => true 
     }
